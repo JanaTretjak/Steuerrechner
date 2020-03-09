@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div>
+    <h1>Einkommensteuer-berechnung</h1>
+    <form>
+        <table>
+            <tr>
+                <td>Jahr</td>
+                <td><select name="jahr" id="Jahr">
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>zu versteuerndes Einkommen</td>
+                <td><input type="number" name="" id="einkommen">Euro</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Art der Veranlagung:</td>
+                <td>
+                    <input type="radio" name="Veranlagung" id="einzel" checked>
+                    <label for="">Einzelveranlagung</label>
+                </td>
+            </tr>   
+            <tr>
+                <td>
+                    <input type="radio" name="Veranlagung" id="zusammen">
+                    <label for="">Zusammenveranlagung</label>
+                </td>
+            </tr> 
+        </table>
+        <input type="button" onclick="rechnen()" value="Berechnen">
+    </form>
+    <table class="result">
+        <tr>
+            <td><p>Einkommensteuer</p></td>
+            <td><p id="ergebnis"></p></td>
+        </tr>
+    </table>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
